@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="js/vue.js"></script>
+  </head>
+  <body class="sample">
+    <svg class="tree" width="192" height="165" viewBox="0 0 192 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M96 0L191.263 165H0.737206L96 0Z" fill="#13350A"/>
+      <g id="yellow_following_lights">
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}" cx="79" cy="31" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2':class2,'yellow_following_lights':class3}" cx="91" cy="37" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights1':class2,'yellow_following_lights':class3}" cx="103" cy="41" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}" cx="117" cy="44" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2':class2,'yellow_following_lights':class3}" cx="130" cy="62" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights1':class2,'yellow_following_lights':class3}" cx="119" cy="72" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}" cx="108" cy="81" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2':class2,'yellow_following_lights':class3}" cx="95" cy="91" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights1':class2,'yellow_following_lights':class3}" cx="82" cy="99" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}"  cx="67" cy="104" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2':class2,'yellow_following_lights':class3}"  cx="52" cy="107" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights1':class2,'yellow_following_lights':class3}"  cx="37" cy="105" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}"  cx="23" cy="128" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2':class2,'yellow_following_lights':class3}"  cx="37" cy="135" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights1':class2,'yellow_following_lights':class3}"  cx="53" cy="141" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}"  cx="69" cy="146" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2':class2,'yellow_following_lights':class3}"  cx="85" cy="150" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights1':class2,'yellow_following_lights':class3}"  cx="102" cy="153" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights3':class2,'yellow_following_lights':class3}"  cx="119" cy="155" r="5"/>
+        <circle :class="{'color_lights':class1, 'yellow_flash_lights2ы':class2,'yellow_following_lights':class3}"  cx="136" cy="157" r="5"/>
+      </g>
+    </svg>
+    <button @click="changeToClass1" class="button">Последовательно</button>
+    <button @click="changeToClass2" class="button">Рандомно</button>
+    <button @click="changeToClass3" class="button">Все</button>
+    <script>
+      Vue.createApp({
+  			data: () => ({
+          class1:false,
+          class2:false,
+          class3:false
+  			}),
+        methods:{
+          changeToClass1(){
+          this.class1=true
+          this.class2=false
+          this.class3=false
+        },
+        changeToClass2(){
+          this.class1=false
+          this.class2=true
+          this.class3=false
+        },
+        changeToClass3(){
+          this.class1=false
+          this.class2=false
+          this.class3=true
+        }
+        }
+  		}).mount('.sample');
+    </script>
+  </body>
+</html>
